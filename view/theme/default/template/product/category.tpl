@@ -125,9 +125,63 @@
                 <?php } ?>
               </div>
               <div class="button-group">
+              
+	<div id="myModalBox" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Заголовок модального окна -->
+          <div class="modal-header">
+            <a  class="close" data-dismiss="modal">X</a>
+            <br />
+          </div>
+          <!-- Основной текст сообщения -->
+          <div class="modal-body">
+                            <div id="fast_order_form">       
+                            <input id="product_name" type="hidden" value="<?php echo $heading_title; ?>">
+                            <input id="product_model" type="hidden" value="<?php echo $product['name']; ?>">
+                            <input id="product_price" type="hidden" value="<?php echo $product['price']; ?>">
+                            
+                                <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
+                                <div class="fast_order_center"><?php echo $heading_title; ?> </div>
+                                <div class="fast_order_center"> Модель: <?php echo $product['name']; ?> </div>
+                                <div class="fast_order_center">Цена: <?php echo $product['price']; ?>  </div>
+                                                
+                            
+                            
+                            <div class="fast_order_left">
+                             
+                              <p><input id="customer_name" placeholder="Ваше имя" class="wow fadeInLeft form-input form-input-name form-control animated" type="text"/></p>
+                             
+                              <p><input placeholder="Номер телефона" class="wow fadeInLeft form-input form-input-name form-control animated" type="text" id="customer_phone"/></p>
+                              
+                              <p><textarea placeholder="Коментарий"  class="wow fadeInLeft form-input form-input-name form-control animated" id="customer_message" rows="5"></textarea></p>
+                            </div>
+                            
+                            <div class="fast_order_center">
+                              <p id="fast_order_result">Пожалуйста, укажите ваше имя и телефон, чтобы мы могли связаться с вами</p>
+                              <button id="clear_form" class="fast_order_button"><span>Оформить заказ</span></button>
+                            </div>
+                          </div>
+                            
+                            
+                            <div class="text-center" id="call-result">
+                                
+                            </div>
+          </div>
+          <!-- Нижняя часть модального окна -->
+          <!--
+          <div class="modal-footer">
+            <button id="clear_form" type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
                 <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
                 <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
                 <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
+                
+                <a id="wrap" href="#myModalBox" role="button" class="b_zakaz" data-toggle="modal">Быстрый заказ</a>
               </div>
             </div>
           </div>

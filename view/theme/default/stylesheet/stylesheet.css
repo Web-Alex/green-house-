@@ -553,7 +553,8 @@ h2.price {
 .product-thumb .button-group {
 	border-top: 1px solid #ddd;
 	background-color: #eee;
-	overflow: auto;
+    height: 82px;
+	
 }
 .product-list .product-thumb .button-group {
 	border-left: 1px solid #ddd;
@@ -565,7 +566,7 @@ h2.price {
 }
 .product-thumb .button-group button {
 	width: 60%;
-	border: none;
+	border: 1px solid #ccc;
 	display: inline-block;
 	float: left;
 	background-color: #eee;
@@ -678,7 +679,7 @@ h2.price {
     /*border-radius: 15px;
 	border: 2px solid #a1ce41;*/
 	margin-bottom: 20px;
-	overflow: auto;
+	/*overflow: auto;*/
    /* box-shadow: 2px 2px 2px #ccc;*/
 }
 
@@ -798,7 +799,7 @@ a:hover {
     border-top-right-radius: 0;
 }
 select.form-control, textarea.form-control, input.form-control[type="text"], input.form-control[type="password"], input.form-control[type="datetime"], input.form-control[type="datetime-local"], input.form-control[type="date"], input.form-control[type="month"], input.form-control[type="time"], input.form-control[type="week"], input.form-control[type="number"], input.form-control[type="email"], input.form-control[type="url"], input.form-control[type="search"], input.form-control[type="tel"], input.form-control[type="color"] {
-    font-size: 12px;
+    font-size: 16px;
 }
 .input-group .form-control, .input-group-addon, .input-group-btn {
     display: table-cell;
@@ -848,3 +849,93 @@ h5{
 .shah1 {
     display:none; 
  }
+ 
+ /*Modal*/
+ 
+#fast_order_form .fast_order_left {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin:  auto;
+}
+
+
+#fast_order_form .fast_order_center {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  
+}
+#fast_order_form #fast_order_result {
+  color: #aaa;
+  margin-bottom: 14px;
+}
+#fast_order_form #fast_order_result .fast_order_error {
+  color: #f00;
+}
+#fast_order_form #fast_order_result .fast_order_success {
+  color: #00d12a;
+}
+#fast_order_form p {
+  margin-bottom: 22px;
+  padding: 0px;
+}
+
+#fast_order_form input {
+  margin: 0 auto;
+  padding:0 10px;
+  
+  width: 70%;
+}
+
+#fast_order_form .fast_order_button {
+  font-size: 17px;
+  cursor: pointer;
+  height: 40px;
+  width: 220px;
+  float: none;
+}
+#customer_message{
+    margin: 0 auto;
+    width: 70%;
+}
+.b_zakaz{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border: 1px #ccc solid;
+    font-weight: bold;
+    color: #88bf88;
+}
+.b_zakaz:hover{
+    background-color: #ccc;
+    opacity: 0.7;
+    color: #000;
+}
+.b_zakaz:focus{
+    clear: both;
+    text-decoration: none;
+    list-style: none;
+    background: none;
+    color: #000;
+}
+.close{
+    clear: both;
+    text-decoration: none;
+    list-style: none;
+    background: none;
+    width: 10px;
+    float: right;
+    color: red;
+}
+.close:hover{
+    clear: both;
+    text-decoration: none;
+    list-style: none;
+    background: none;
+}
+
